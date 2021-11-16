@@ -43,7 +43,8 @@ export const definitionsToAuthorize = onlyOAS3(createSelector(
               authorizationUrl: flowVal.get("authorizationUrl"),
               tokenUrl: flowVal.get("tokenUrl"),
               scopes: flowVal.get("scopes"),
-              type: definition.get("type")
+              type: definition.get("type"),
+              additionalFormParams: flowVal.get("additionalFormParams")
             })
 
             list = list.push(new Map({

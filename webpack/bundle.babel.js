@@ -2,12 +2,12 @@
  * @prettier
  */
 
-/** Dev Note: 
+/** Dev Note:
  * StatsWriterPlugin is disabled by default; uncomment to enable
  * when enabled, rebuilding the bundle will cause error for assetSizeLimit,
  * which we want to keep out of CI/CD
  * post build, cli command: npx webpack-bundle-analyzer <path>
- */ 
+ */
 
 import configBuilder from "./_config-builder"
 import { DuplicatesPlugin } from "inspectpack/plugin"
@@ -19,7 +19,7 @@ const result = configBuilder(
   {
     minimize: true,
     mangle: true,
-    sourcemaps: true,
+    sourcemaps: false,
     includeDependencies: true,
   },
   {
